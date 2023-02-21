@@ -1,0 +1,34 @@
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.csproj.AssemblyReference.cache
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.GeneratedMSBuildEditorConfig.editorconfig
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.AssemblyInfoInputs.cache
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.AssemblyInfo.cs
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.csproj.CoreCompileInputs.cache
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.dll
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/refint/TerminalTicetManager.dll
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.pdb
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/TerminalTicetManager
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/TerminalTicetManager.deps.json
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/TerminalTicetManager.runtimeconfig.json
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/TerminalTicetManager.dll
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/TerminalTicetManager.pdb
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.genruntimeconfig.cache
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/ref/TerminalTicetManager.dll
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/bin/Debug/net7.0/ConsoleTables.dll
+/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/obj/Debug/net7.0/TerminalTicetManager.csproj.CopyComplete
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\TerminalTicetManager.exe
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\TerminalTicetManager.deps.json
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\TerminalTicetManager.runtimeconfig.json
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\TerminalTicetManager.dll
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\TerminalTicetManager.pdb
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\bin\Debug\net7.0\ConsoleTables.dll
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.csproj.AssemblyReference.cache
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.AssemblyInfoInputs.cache
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.AssemblyInfo.cs
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.csproj.CoreCompileInputs.cache
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.csproj.CopyComplete
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.dll
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\refint\TerminalTicetManager.dll
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.pdb
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\TerminalTicetManager.genruntimeconfig.cache
+C:\Users\Kamil\Documents\MEGAsync\TerminalTicetManager\obj\Debug\net7.0\ref\TerminalTicetManager.dll
