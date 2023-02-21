@@ -68,3 +68,4 @@ namespace TerminalTicetManager
 //obsługa plików txt jako baza danych
 //ładne tabele ticetów i chatu
 //walidacja wpisywania głupot
+

@@ -1,8 +1,10 @@
 using System;
+using ConsoleTables;
+
 
 namespace TerminalTicetManager
 {
-    public class Ticet:KtoryUzytk
+    public class Ticet : KtoryUzytk
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -10,9 +12,10 @@ namespace TerminalTicetManager
         public string WhoCreated { get; set; }
         public DateTime Created { get; set; }
         public string WhoMake { get; set; }
-        public int Status { get; set; }
+        public int Status { get; set; } 
 
         public static List<Ticet> nowaLista = new List<Ticet>();
+        
 
         public Ticet(string Tytul, string Opis)
         {
@@ -22,7 +25,7 @@ namespace TerminalTicetManager
             Created = DateTime.Now;
             WhoMake = "Nieprzypisane";
             Status = 1;
-            WhoCreated=User.listaUzytkownikow[licznik].Login;
+            WhoCreated = User.listaUzytkownikow[licznik].Login;
         }
         public static void NewTicet()
         {
@@ -42,20 +45,24 @@ namespace TerminalTicetManager
         {
             Console.Clear();
             System.Console.WriteLine($"App Console Ticet Manger             zalogowany jako:{User.listaUzytkownikow[licznik].Login}");
-            System.Console.WriteLine("lista Ticetów");
             System.Console.WriteLine();
+            System.Console.WriteLine("lista Ticetów");
+
+            //create new tabel
+
+            var tableTicet = new ConsoleTable("ID", "Tytuł", "Opis", "Do kogo przypisane", "Data Utworzenia", "Status", "Kto zgłosił");
+            tableTicet.Options.EnableCount = false;
             if (nowaLista.Count == 0)
             {
                 System.Console.WriteLine("lista jest pusta");
             }
             else
             {
+
                 for (int i = 0; i < nowaLista.Count; i++)
                 {
-                    System.Console.WriteLine($"{nowaLista[i].Id}  {nowaLista[i].Title}  {nowaLista[i].Description}      {nowaLista[i].WhoMake}  {nowaLista[i].Created}  {nowaLista[i].Status}       {nowaLista[i].WhoCreated}");
-
+                    System.Console.WriteLine(tableTicet.AddRow(nowaLista[i].Id, nowaLista[i].Title, nowaLista[i].Description, nowaLista[i].WhoMake, nowaLista[i].Created, nowaLista[i].Status, nowaLista[i].WhoCreated));
                 }
-                System.Console.WriteLine();
                 System.Console.WriteLine($"ilość ticetów: {nowaLista[nowaLista.Count - 1].Id}");
             }
         }
@@ -71,13 +78,17 @@ namespace TerminalTicetManager
             switch (swichNumber)
             {
                 case 1:
-                App.AppRun();
+                    System.Console.WriteLine("do kogo przypisać");
+                    nowaLista[IdToEdit].WhoMake = Console.ReadLine();
+                    App.AppRun();
                     break;
                 case 2:
-                App.AppRun();
+                    System.Console.WriteLine("Wprowadz status od 1 do 3");
+                    nowaLista[IdToEdit].Status = int.Parse(Console.ReadLine());
+                    App.AppRun();
                     break;
                 case 3:
-                //main menu
+                    //main menu
                     App.AppRun();
                     break;
             }

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConsoleTables;
+
 
 namespace TerminalTicetManager
 {
@@ -19,22 +21,27 @@ namespace TerminalTicetManager
             Text = text;
             Created = DateTime.Now;
             Name = User.listaUzytkownikow[licznik].Login;
+         
             IdTicet = IDChat;
         }
+        //show Chat with filter who login
         public static void ShowChat()
         {
+            
+            var tableChat = new ConsoleTable("Wiadomość", "Kto napisał", "Czas");
+            tableChat.Options.EnableCount = false;
             for (int i = 0; i < nowyCzat.Count; i++)
             {
                 if (nowyCzat[i].IdTicet == IDChat)
                 {
-                    //teraz wyświetla wszystkie wiadomości z czatu
-                    System.Console.WriteLine($"{nowyCzat[i].Text}     {nowyCzat[i].Name}  {nowyCzat[i].Created}");
+                    System.Console.WriteLine(tableChat.AddRow(nowyCzat[i].Text,nowyCzat[i].Name,nowyCzat[i].Created));
                 }
             }
             SendChat();
         }
         public static void SendChat()
         {
+            
             System.Console.WriteLine("co chcesz zrobić?");
             System.Console.WriteLine("Enter - nowa wiadomość || ESC - Cofnij");
             switch (Console.ReadKey().Key)
@@ -59,7 +66,7 @@ namespace TerminalTicetManager
             System.Console.WriteLine("Chat");
             System.Console.Write("Wprowadz ID zgłoszenia");
             IDChat = int.Parse(Console.ReadLine()) - 1;
-            ShowChat();
+            SendChat();
         }
     }
 }

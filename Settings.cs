@@ -28,7 +28,6 @@ namespace TerminalTicetManager
                     break;
                 case 4:
                     User.ShowAll();
-                    
                     break;
                 case 5:
                 App.AppRun();
