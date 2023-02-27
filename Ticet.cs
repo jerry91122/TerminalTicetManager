@@ -58,6 +58,7 @@ namespace TerminalTicetManager
             }
             else
             {
+                Console.Clear();
 
                 for (int i = 0; i < nowaLista.Count; i++)
                 {
@@ -70,10 +71,10 @@ namespace TerminalTicetManager
         {
             int IdToEdit, swichNumber;
             System.Console.Write("podaj Id ticetu do edycji: ");
-            IdToEdit = int.Parse(Console.ReadLine());
+            IdToEdit = int.Parse(Console.ReadLine())-1;
             System.Console.WriteLine("Edytujesz:");
             System.Console.WriteLine($"{nowaLista[IdToEdit].Id}  {nowaLista[IdToEdit].Title}  {nowaLista[IdToEdit].Description}      {nowaLista[IdToEdit].WhoMake}  {nowaLista[IdToEdit].Created}  {nowaLista[IdToEdit].Status}     ");
-            System.Console.WriteLine("jakie pole chcesz edytować? 1. Do kogo przypisane || 2.Status || 3. nic nie rób");
+            System.Console.WriteLine("jak pole chcesz edytować? 1. Do kogo przypisane || 2.Status || 3. nic nie rób");
             swichNumber = int.Parse(Console.ReadLine());
             switch (swichNumber)
             {

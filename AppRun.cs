@@ -66,6 +66,8 @@ namespace TerminalTicetManager
 }
 //ToDo
 //obsługa plików txt jako baza danych
-//ładne tabele ticetów i chatu
 //walidacja wpisywania głupot
+//linq wyszukiwanie
+//dadać opcje szukania wg frazy wpisanej przez użytkownika
+
 

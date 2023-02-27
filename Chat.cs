@@ -27,7 +27,7 @@ namespace TerminalTicetManager
         //show Chat with filter who login
         public static void ShowChat()
         {
-            
+            Console.Clear();
             var tableChat = new ConsoleTable("Wiadomość", "Kto napisał", "Czas");
             tableChat.Options.EnableCount = false;
             for (int i = 0; i < nowyCzat.Count; i++)

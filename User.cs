@@ -12,10 +12,7 @@ namespace TerminalTicetManager
         public string Role { get; set; }
         public static List<User> listaUzytkownikow = new List<User>();
 
-        public User()
-        {
-            
-        }
+       
         public User(string login, string haslo, string rola)
         {
             Login = login;
