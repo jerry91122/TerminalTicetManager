@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "L0oLbKdB62TcqRoaTVW83U0rFB5lxjlDGQtrgSsmYgp3kffqXVhGofOCI209+9hCAODlyS9kgeMFRlO6XG7aMA==",
+  "success": true,
+  "projectFilePath": "/home/kamil/MEGAsync Downloads/C#/TerminalTicetManager/TerminalTicetManager.csproj",
+  "expectedPackageFiles": [
+    "/home/kamil/.nuget/packages/consoletables/2.4.2/consoletables.2.4.2.nupkg.sha512",
+    "/home/kamil/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.reflection.typeextensions/4.3.0/system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/home/kamil/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

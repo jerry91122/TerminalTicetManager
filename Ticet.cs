@@ -12,11 +12,14 @@ namespace TerminalTicetManager
         public string WhoCreated { get; set; }
         public DateTime Created { get; set; }
         public string WhoMake { get; set; }
-        public int Status { get; set; } 
+        public int Status { get; set; }
 
         public static List<Ticet> nowaLista = new List<Ticet>();
-        
 
+        public Ticet()
+        {
+
+        }
         public Ticet(string Tytul, string Opis)
         {
             Id = nowaLista.Count + 1;
@@ -43,13 +46,9 @@ namespace TerminalTicetManager
         }
         public static void showList()
         {
-            Console.Clear();
-            System.Console.WriteLine($"App Console Ticet Manger             zalogowany jako:{User.listaUzytkownikow[licznik].Login}");
-            System.Console.WriteLine();
-            System.Console.WriteLine("lista Ticetów");
-
             //create new tabel
-
+            DrawTabel.UpTabel();
+            System.Console.WriteLine("lista Ticetów");
             var tableTicet = new ConsoleTable("ID", "Tytuł", "Opis", "Do kogo przypisane", "Data Utworzenia", "Status", "Kto zgłosił");
             tableTicet.Options.EnableCount = false;
             if (nowaLista.Count == 0)
@@ -58,20 +57,40 @@ namespace TerminalTicetManager
             }
             else
             {
-                Console.Clear();
-
-                for (int i = 0; i < nowaLista.Count; i++)
+                if (User.listaUzytkownikow[licznik].Role == "Admin")
                 {
-                    System.Console.WriteLine(tableTicet.AddRow(nowaLista[i].Id, nowaLista[i].Title, nowaLista[i].Description, nowaLista[i].WhoMake, nowaLista[i].Created, nowaLista[i].Status, nowaLista[i].WhoCreated));
+                    foreach (var item in nowaLista)
+                    {
+                        tableTicet.AddRow(item.Id, item.Title, item.Description, item.WhoMake, item.Created, item.Status, item.WhoCreated);
+                    }
+                    tableTicet.Write();
+
+                    System.Console.WriteLine($"ilość ticetów: {nowaLista[nowaLista.Count - 1].Id}");
+                    DrawTabel.DownTabel();
                 }
-                System.Console.WriteLine($"ilość ticetów: {nowaLista[nowaLista.Count - 1].Id}");
+                else
+                {
+                    var filter = from c in nowaLista
+                                 where c.WhoCreated == User.listaUzytkownikow[licznik].Login
+                                 select c;
+                    // wypisanie w konsoli wszystkich elementów
+
+                    foreach (var item in filter)
+                    {
+                        tableTicet.AddRow(item.Id, item.Title, item.Description, item.WhoMake, item.Created, item.Status, item.WhoCreated);
+                    }
+                    tableTicet.Write();
+
+                    System.Console.WriteLine($"ilość ticetów: {nowaLista[nowaLista.Count - 1].Id}");
+                    DrawTabel.DownTabel();
+                }
             }
         }
         public static void editTicet()
         {
             int IdToEdit, swichNumber;
             System.Console.Write("podaj Id ticetu do edycji: ");
-            IdToEdit = int.Parse(Console.ReadLine())-1;
+            IdToEdit = int.Parse(Console.ReadLine()) - 1;
             System.Console.WriteLine("Edytujesz:");
             System.Console.WriteLine($"{nowaLista[IdToEdit].Id}  {nowaLista[IdToEdit].Title}  {nowaLista[IdToEdit].Description}      {nowaLista[IdToEdit].WhoMake}  {nowaLista[IdToEdit].Created}  {nowaLista[IdToEdit].Status}     ");
             System.Console.WriteLine("jak pole chcesz edytować? 1. Do kogo przypisane || 2.Status || 3. nic nie rób");
@@ -93,6 +112,30 @@ namespace TerminalTicetManager
                     App.AppRun();
                     break;
             }
+        }
+        public static void SearchTicet()
+        {
+            string SearchWord;
+            System.Console.WriteLine("wprowadz szukaną frazę:");
+            SearchWord = Console.ReadLine();
+
+            DrawTabel.UpTabel();
+            //METODA WYSZUKIWANIA W TABELI ZA POMOCĄ LINQ  <----
+            /* var list = from c in nowaLista
+                        where c.Description.Contains(SearchWord) || c.Title.Contains(SearchWord)
+                        select c;
+            */
+            //TO SAMO TYLKO ZAPISANE JAKO WYRAŻENIE LAMBDA  <----
+            var listTest = nowaLista.Where(c => c.Description.Contains(SearchWord) || c.Title.Contains(SearchWord));
+            //narysuj tabelę
+            var tableTicet = new ConsoleTable("ID", "Tytuł", "Opis", "Do kogo przypisane", "Data Utworzenia", "Status", "Kto zgłosił");
+            tableTicet.Options.EnableCount = false;
+
+            foreach (var item in listTest)
+            {
+                System.Console.WriteLine(tableTicet.AddRow(item.Id, item.Title, item.Description, item.WhoMake, item.Created, item.Status, item.WhoCreated));
+            }
+            DrawTabel.DownTabel();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace TerminalTicetManager
         public string Text { get; set; }
         public DateTime Created { get; set; }
         public string Name { get; set; }
-        public int IdTicet { get; set; }
+       // public static string MainTheme ; 
 
         public static List<Chat> nowyCzat = new List<Chat>();
         public Chat(string text)
@@ -21,27 +21,27 @@ namespace TerminalTicetManager
             Text = text;
             Created = DateTime.Now;
             Name = User.listaUzytkownikow[licznik].Login;
-         
-            IdTicet = IDChat;
+            //MainTheme=Ticet.nowaLista[IDChat].Title;
+
         }
         //show Chat with filter who login
         public static void ShowChat()
         {
-            Console.Clear();
+            
             var tableChat = new ConsoleTable("Wiadomość", "Kto napisał", "Czas");
             tableChat.Options.EnableCount = false;
-            for (int i = 0; i < nowyCzat.Count; i++)
+            DrawTabel.UpTabel();
+            System.Console.WriteLine("temat czatu: ");
+            foreach (var item in nowyCzat)
             {
-                if (nowyCzat[i].IdTicet == IDChat)
-                {
-                    System.Console.WriteLine(tableChat.AddRow(nowyCzat[i].Text,nowyCzat[i].Name,nowyCzat[i].Created));
-                }
+                tableChat.AddRow(item.Text, item.Name, item.Created);
             }
+            tableChat.Write();
             SendChat();
         }
         public static void SendChat()
         {
-            
+
             System.Console.WriteLine("co chcesz zrobić?");
             System.Console.WriteLine("Enter - nowa wiadomość || ESC - Cofnij");
             switch (Console.ReadKey().Key)

@@ -46,8 +46,8 @@ namespace TerminalTicetManager
             }
             User newUser = new User(log, passwd, rol);
             listaUzytkownikow.Add(newUser);
-            //App.AppRun();
-            WhoLogin.Check();
+            //App.AppRun();//przywrócić jak bd potpieta DB
+            WhoLogin.Check();//dopóki nie bd potpięta DB
         }
         public static void EditUser()
         {

@@ -7,8 +7,8 @@ namespace TerminalTicetManager
     {
         static void Main(string[] args)
         {
-            //User.AddUser();  
-            Search.SearchWord();
+            User.AddUser();  
+           // Sort.SortBy();
         }
     }
 }

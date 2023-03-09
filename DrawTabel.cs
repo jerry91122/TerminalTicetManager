@@ -1,13 +1,22 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ConsoleTables;
 
 namespace TerminalTicetManager
 {
-    public class App : WhoLogin
+    public class DrawTabel : KtoryUzytk
     {
-        public static void AppRun()
+        public static void UpTabel()
         {
-            Ticet.showList();
+            Console.Clear();
+            System.Console.WriteLine($"App Console Ticet Manger             zalogowany jako:{User.listaUzytkownikow[licznik].Login}");
             System.Console.WriteLine();
+            
+        }
+        public static void DownTabel()
+        {
             System.Console.WriteLine("wybierz numer akcji:");
 
             for (int i = 0; i < User.listaUzytkownikow.Count; i++)
@@ -15,7 +24,7 @@ namespace TerminalTicetManager
                 if (Log == User.listaUzytkownikow[i].Login && User.listaUzytkownikow[i].Role == "Admin")
                 {
 
-                    System.Console.WriteLine("1. Nowy || 2. Edytuj ||3. Ustawienia ||4. Wyloguj ||5.Czat ||6. Zakończ Program");
+                    System.Console.WriteLine("1. Nowy || 2. Edytuj ||3. Ustawienia ||4. Wyloguj ||5.Czat ||6. Zakończ Program|| 7. Szukaj || 8.Sortuj");
                     int jakiKlawisz;
                     switch (jakiKlawisz = int.Parse(Console.ReadLine()))
                     {
@@ -37,6 +46,13 @@ namespace TerminalTicetManager
                         case 6:
                             Environment.Exit(0);
                             break;
+                        case 7:
+                            Ticet.SearchTicet();
+                            break;
+                        case 8:
+                            Sort.SortBy();
+                            //sortuj
+                            break;
                     }
                 }
                 else if (Log == User.listaUzytkownikow[i].Login && User.listaUzytkownikow[i].Role == "Standard")
@@ -57,6 +73,12 @@ namespace TerminalTicetManager
                         case 4:
                             Environment.Exit(0);
                             break;
+                        case 5:
+                            Ticet.SearchTicet();
+                            break;
+                        case 6:
+                            //sortuj
+                            break;
                     }
                 }
                 System.Console.WriteLine();
@@ -64,8 +86,3 @@ namespace TerminalTicetManager
         }
     }
 }
-//ToDo
-//obsługa plików txt jako baza danych
-//walidacja wpisywania głupot
-//linq wyszukiwanie
-//dadać opcje szukania wg frazy wpisanej przez użytkownika
